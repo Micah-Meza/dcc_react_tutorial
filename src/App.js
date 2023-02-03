@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'; //imrs shortcut
+import DisplayEntries from './Components/DisplayEntries/DisplayEntries';
 
 function App() {
+
+  //make sure to name the second parameter set.... that's the convention.
+  const [entries, setEnteries] = useState([{weight: 175, date: '11-23-2021'}, {weight: 165, date: '12-12-2021'}]) // normally this is not done. 
+
+  // whenever you write javascript code use curly brackets, From here instaniate your props file. I'm using the parentsEntries parameters.
+  // the parentEntries key is pasting info to the DisplayEntries.
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     <DisplayEntries parentEntries = {entries}/>
     </div>
   );
 }
