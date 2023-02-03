@@ -6,7 +6,7 @@
 // to get props to work line 18 need to read props.parentEntries
 const DisplayEntries = (props) => {
     return (  
-    <table>
+    <table className="table">
     <thead>
       <tr>
       <th>Entry Number</th>
